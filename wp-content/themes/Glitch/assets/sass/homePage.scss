@@ -1,0 +1,45 @@
+@import '_partials/mixins';
+@import '_partials/variables';
+@import '_partials/extends';
+
+#home-page-content{
+  .home-copy-section{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 6%;
+    .top{
+      .title-container{
+        h1{
+          font-size: 85px;
+          color:$copper;
+          font-family: $title_font;
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    .bottom{
+      display: flex;
+      justify-content: flex-end;
+      .copy-container{
+        max-width: 41%;
+        p{
+          font-weight: lighter;
+          margin-bottom: 20px;
+          line-height: 25px;  
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  .latest-blogs-section ul {
+    grid-template-columns: repeat(auto-fit, minmax(#{$mobile-page-width}, 1fr));
+  }
+}

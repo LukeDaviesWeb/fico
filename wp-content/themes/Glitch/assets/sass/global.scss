@@ -1,0 +1,481 @@
+/*
+Theme Name: Glitch
+Author: Luke Davies - Glitch - Themes
+Version: 4.0.4
+
+Glitch WordPress Theme © 2019 Glitch
+
+*/
+@import '_partials/mixins';
+@import '_partials/variables';
+@import '_partials/extends';
+
+// @import "_partials/bootstrap.scss";
+
+//variables
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#map{
+  min-height: 400px;  
+}
+
+body{
+  font-size: 16px;
+}
+
+.display-none {
+  display: none;
+}
+
+a{
+  text-decoration: none;
+  color: currentColor;
+}
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+h1 {
+  font-size: $mod_1 * $mod_1 * $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $mod_2 * $min_font
+  );
+}
+h2 {
+  font-size: $mod_1 * $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $mod_2 * $min_font
+  );
+}
+h3 {
+  font-size: $mod_1 * $mod_1 * 1rem;
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $mod_1 * $mod_1 * $min_font,
+    $mod_2 * $mod_2 * $min_font
+  );
+}
+
+#header {
+  border: 1px solid;
+  min-height: 800px;
+  background-image: url('/wp-content/uploads/2019/02/wallapper.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 23%, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}
+
+#inner-page-header {
+  border: 1px solid;
+  min-height: 250px;
+  background-image: url('/wp-content/uploads/2019/02/wallapper.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  .filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 23%, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}
+
+//menu's
+.desktop-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .desktop-top {
+    display: flex;
+    width:$page-width;
+    margin: auto;
+    padding:35px 0px;
+    .left{
+      flex:1;
+      justify-content: flex-start;
+
+      .logo-container .logo {
+        background-image: url('/wp-content/uploads/2019/05/01.-HEADER-LOGO.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 50px;
+      }
+    }
+
+    .right{
+      flex:1;
+      justify-content: flex-end;
+
+      font-weight: lighter;
+
+      .contact, .socials-container, ul{
+        display: flex;
+      }
+
+      .contact{
+        justify-content: flex-end;  
+        height: 100%;
+        align-items:center;
+
+        .email-container{
+          margin-right: $G;
+          a{
+            color:$light_brown;
+            transition:all .4s ease;
+          }
+          a:hover{
+            color: $light_gray; 
+          }
+        }
+      }
+
+      .socials-container{
+        font-size: 21px;
+
+        ul li:nth-child(1){
+          margin-right:20px;
+        }
+
+
+        ul li{
+          background-color: $light_brown;
+          border: 1px solid $light_brown;
+          color:#fff;
+          height: 30px;
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0px;
+          border-radius: 50%;
+          transition: all .4s ease;
+          cursor:pointer;
+        }
+
+        ul li:hover{
+          background-color: $light_gray;
+          color: $light_brown;  
+        }
+      }
+    }
+
+  }
+
+  .desktop-bottom{
+    border: top 1px solid $light_brown;
+    border-bottom: 1px solid $light_brown;
+    padding: 20px 0px;
+
+    .menu-menu-1-container{
+      ul{
+        display:flex;
+        li{
+          flex:1;
+          display:flex;
+          justify-content: center;
+          align-items:center;
+          color:$blue;
+          font-weight:lighter;
+        }
+      }
+    }
+  }
+
+  .menu {
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        border: 1px solid;
+        padding: 10px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-size: $p-font-size;
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  background-color: orange;
+  display: block;
+  position: relative;
+  width: 100%;
+  .mobile-menu-icon {
+    padding: 20px;
+  }
+  .menu-container {
+    background-color: red;
+    position: absolute;
+    width: 200px;
+    height: 100vh;
+    left: 0;
+    padding: 20px;
+    top: 0;
+    z-index: 9;
+  }
+
+  .menu-exit-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 20px;
+  }
+}
+
+//global template styles
+
+
+.page-section {
+  margin: 50px 0px;
+}
+
+//footer
+footer {
+  display: flex;
+  width:$page-width;
+  margin: auto;
+  padding:50px 0px;
+
+  a{
+    color: currentColor;
+    transition: all .4s ease;  
+  }
+
+  a:hover{
+    color: $light_gray;
+  }
+.left{
+  display: flex;
+  flex-direction: column;
+  flex:3;
+  .logo{
+    background-image: url('/wp-content/uploads/2019/05/01.-HEADER-LOGO.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+  }
+
+  .copy-row{
+    display:flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: lighter;
+    color:$light_brown;
+    max-width: 400px;
+    margin-top:20px;
+    margin-left: 2%;
+
+    span{
+      font-weight: bolder;  
+    }
+
+    div a:nth-child(2){
+      margin:0px 10px;
+    }
+  }
+
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  text-align: right;
+  color: $light_brown;
+
+  .contact{
+    font-weight: lighter;
+    margin:20px 0px;
+    font-size: 14px;
+
+    p{
+      margin-top:10px;  
+    }
+  }
+
+  .socials-container ul{
+    display: flex;  
+    justify-content: flex-end;
+  }
+
+  .socials-container ul li{
+    background-color: $light_brown;
+    border: 1px solid $light_brown;
+    color:#fff;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 50%;
+    transition: all .4s ease;
+    cursor:pointer;
+    transition: all .4s ease;
+  }
+
+  ul li:hover{
+    background-color: $light_gray;
+    color: $light_brown;  
+  }
+
+  .socials-container ul li:nth-child(1){
+    margin-right: 10px;
+  }
+}
+
+}
+
+
+.form-section{
+  background-color:$light_gray;
+  padding:50px 6%;
+  .title-container{
+    margin-bottom: 40px;
+    h4{
+      font-family: $title_font;
+      color:$blue;
+      font-size: 65px;
+    }
+
+    p{
+      font-family: $copy_font;
+      font-weight: lighter;
+    }
+  }
+  .form-container{
+
+    .form-row.double input:nth-child(1){
+      margin-right:10px;
+    }
+
+    .form-row.double input:nth-child(2){
+      margin-left:10px;
+    }
+
+    .form-row.submit{
+      margin-top:40px;
+    }
+
+    .form-row{
+      display:flex;
+      margin-bottom:10px;
+      
+      input{
+        height: 40px;
+        flex:1;
+        padding: 0px 10px;
+        border:0px;
+        font-size: 14px;
+      }
+
+      textarea{
+        flex:1;
+        border: 0px;
+        padding:10px;
+        font-size: 14px;
+      }
+    }
+
+    #form_submit{
+      background-color: $copper;
+      border-radius: 5px;
+      color: #fff;
+      width: 250px;
+      height: 40px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+//global media queries
+//mobile and desktop menu hide / show
+@media screen and (max-width: $break-small) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mobile-menu .logo {
+    line-height: 54px;
+  }
+
+  .template-container {
+    max-width: #{$mobile-page-width};
+  }
+
+  footer .footer-row .footer-logo {
+    flex: 3;
+  }
+}
+@media screen and (min-width: $break-small + 1) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+  }
+
+  .mobile-menu-slidout {
+    display: none;
+  }
+}

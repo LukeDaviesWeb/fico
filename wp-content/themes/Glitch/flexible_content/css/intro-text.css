@@ -1,0 +1,159 @@
+.intro_text .sub_intro {
+    margin: auto;
+
+}
+.intro_text {
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+}
+
+.sub_intro li {
+    font-size: 23px;
+    line-height: 160%;
+    font-family: 'helvetica', sans-serif;
+    font-weight: 100;
+}
+.sub_intro ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+.sub_intro h3 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 140%;
+    color: #444;
+    /* padding-bottom: 20px; */
+}
+/*_____________________________
+
+	 alingments & padding 
+______________________________*/
+
+.Intro_Left {
+    margin-left: 15% !important;
+    
+}
+.Intro_Center {
+
+}
+
+.padding-top-d-0{
+  padding-top:0px !important;
+}
+.padding-top-c-20{
+  padding-top:20px !important;
+}
+.padding-top-b-50{
+  padding-top:50px !important;
+}
+.padding-top-a-100{
+  padding-top:100px !important;
+}
+
+.padding-bottom-h-0{
+  padding-bottom:0px !important;
+}
+.padding-bottom-g-20{
+  padding-bottom:20px !important;
+}
+.padding-bottom-f-50{
+  padding-bottom:50px !important;
+}
+.padding-bottom-e-100{
+  padding-bottom:100px !important;
+}
+
+.intro_text .sub_intro {
+   
+    color: #222;
+}
+.xAnim {
+    visibility:hidden;
+}
+
+.intro_text .sub_intro.Intro_Center {
+     margin: auto;
+     width: 61%;
+}
+.Intro_Large {
+    min-height:75vh;
+}
+.page-id-2 .Intro_Large {
+    min-height: 42vh;
+}
+.Intro_Small {
+    min-height:35vh;
+}
+
+.Intro_Grey {
+    background:#eee;
+}
+.Intro_White {
+    background:#fff;
+}
+.sub_intro h2 {
+    color: #304f6d;
+    margin-bottom: 18px;
+    
+}
+.sub_intro p {
+    line-height: 140%;
+      width: 100%;
+    font-size: 30px;
+    font-weight: lighter;
+    color: #222222;
+    padding-top:13px;
+}
+.width-40 {
+	width:40% !important;
+}
+.width-50 {
+	width:50% !important;
+}
+.width-60 {
+	width:60% !important;
+}
+.width-70 {
+	width:70% !important;
+}
+.width-80 {
+	width:80% !important;
+}
+.width-90 {
+	width:90% !important;
+}
+.width-100 {
+	width:100% !important;
+}
+
+@media (max-width:1100px){
+    .Intro_Left {
+      margin-left: 7%!important;
+  }
+
+}
+
+@media (max-width:800px){
+    .width-40 {
+      width: 70%!important;
+  }
+}
+@media (max-width:650px){
+    .width-40 {
+      width: 91%!important;
+  }
+  .width-60 {
+      width: 80%!important;
+  }
+  .sub_intro p {
+    font-size:19px !important;
+  }
+  .sub_intro li {
+      font-size:20px;
+    }
+    .width-50 {
+      width: 80%!important;
+  }
+}

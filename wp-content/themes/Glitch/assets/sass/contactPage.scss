@@ -1,0 +1,116 @@
+@import '_partials/mixins';
+@import '_partials/variables';
+@import '_partials/extends';
+
+#contact-page-content {
+  .form-section {
+    h1 {
+      text-align: center;
+    }
+  }
+
+  input {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  input[type='submit'] {
+    background-color: transparent;
+    width: calc(#{$form-width} / 2);
+  }
+  form {
+    max-width: $form-width;
+    margin: 50px auto;
+
+    .form-row.double-input {
+      justify-content: space-around;
+    }
+
+    .form-row.double-input {
+      justify-content: space-around;
+
+      input {
+        max-width: calc((#{$form-width} / 2) - 5px);
+      }
+      span {
+        flex: initial;
+        width: calc(100% - #{$form-row-spacing});
+      }
+      span:nth-child(1) input {
+        margin-right: calc(#{$form-row-spacing / 2});
+      }
+
+      span:nth-child(3) input {
+        margin-left: calc(#{$form-row-spacing / 2});
+      }
+    }
+
+    .form-row {
+      display: flex;
+      margin-bottom: #{$form-row-spacing};
+
+      span[role='alert'] {
+        font-size: 12px;
+        padding: 5px 0px 0px 0px;
+      }
+      span {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+      }
+      p {
+        display: flex;
+        flex: 1;
+
+        span {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+
+          input {
+            display: flex;
+            flex: 1;
+          }
+        }
+      }
+
+      textarea {
+        width: 100%;
+      }
+    }
+
+    div.wpcf7-validation-errors,
+    div.wpcf7-acceptance-missing {
+      font-size: 12px;
+      width: 100%;
+    }
+
+    div.wpcf7-response-output {
+      margin: 2em 0 0 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #contact-page-content form .form-row.double-input span:nth-child(3) input {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  #contact-page-content form .form-row.double-input span:first-child input {
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  #contact-page-content form .form-row {
+    flex-direction: column;
+  }
+
+  #contact-page-content form .form-row.double-input input {
+    max-width: initial;
+  }
+
+  #contact-page-content form .form-row.double-input span {
+    width: 100%;
+  }
+}
