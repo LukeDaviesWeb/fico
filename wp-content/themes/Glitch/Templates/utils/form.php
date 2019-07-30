@@ -1,6 +1,6 @@
 <div class="form-section">
         <div class="title-container">
-            <h4>Lets Chat?</h4>
+            <h4>Lets chat?</h4>
             <p>Do you have a few questions? Not sure, exactly what you’re after. Or know exactly what you want - let’s get started!</p>
         </div>
         <div class="form-container">

@@ -1,0 +1,48 @@
+@import '_partials/mixins';
+@import '_partials/variables';
+@import '_partials/extends';
+
+#home-page-content.services-page{
+
+  .home-header .left{
+    .image{
+      background-image: url('/wp-content/uploads/2019/05/08.-SERVICES-IMAGE.png');
+      background-size: contain;
+      background-repeat: no-repeat; 
+    }
+  }
+
+  .right{
+    align-items: flex-start;
+
+    .container{
+      align-items: flex-start;
+
+      h1{
+        font-family: Stardos Stencil,cursive;
+        color: $copper;
+        transition: all .2s ease;
+        font-size: 65px;
+      }
+
+      p{
+        margin-bottom: 20px;
+      }
+
+      p, ul li{
+        font-weight: lighter;
+        line-height: 25px;
+        font-size: 14px;
+        color: #444;
+      }
+      ul{
+        margin-left: 25px;
+        margin-bottom: 20px;
+      }
+      li{
+        margin-bottom: 5px;
+        list-style-type:initial;  
+      }
+    }
+  }
+}

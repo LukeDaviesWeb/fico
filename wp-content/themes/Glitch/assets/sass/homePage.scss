@@ -3,6 +3,92 @@
 @import '_partials/extends';
 
 #home-page-content{
+
+  .home-header{
+    min-height: calc(100vh - 178px);
+    display: flex;
+    position: relative;
+
+    .navigation{
+      width: 95%;
+      left: 2.5%;
+      position: absolute;
+      top: calc(50% - 50px);
+      display: flex;
+      justify-content: space-between;
+      height: 100px;
+      align-items: center;
+      font-weight: lighter;
+      color: $blue;
+    
+    }
+
+    .left{
+      flex: 1;
+      padding: 50px 0px 50px 50px;
+      box-sizing: border-box;
+      position: relative;
+      .image{
+        height: 100%;
+        width: 100%;
+        background-image: url('/wp-content/uploads/2019/05/09.-2.SAKURA.png');
+        background-size:cover;
+        position: relative;
+        z-index: 2;
+        transition: all .2s ease;
+      }
+
+      .column{
+        height: 100%;
+        width: 28%;
+        right: 0;
+        top: 0;
+        position: absolute; 
+        z-index: 1;
+        background-color: $light_gray;
+      }
+    }
+    .right{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: $light_gray;
+
+      .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $blue;
+
+        .type{
+          text-transform: capitalize;
+          transition: all .2s ease;
+        }
+
+
+        h2{
+          margin: 100px 0px;
+          font-family: Stardos Stencil,cursive;
+          color: $blue;
+          transition: all .2s ease;
+        }
+        .action .btn{
+          height: 35px;
+          width: 150px;
+          border: 1px solid;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+          font-weight: lighter;
+          color: $blue;
+        }
+      }
+    }
+  }
   .home-copy-section{
     display: flex;
     flex-direction: column;

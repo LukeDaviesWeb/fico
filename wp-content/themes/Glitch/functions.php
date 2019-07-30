@@ -113,6 +113,8 @@ function enqueue_style() {
     wp_enqueue_style( 'template-home', get_template_directory_uri() . '/build/css/homePage.css', null, time() );
     wp_enqueue_style( 'template-contact', get_template_directory_uri() . '/build/css/contactPage.css', null, time() );
     wp_enqueue_style( 'template-about', get_template_directory_uri() . '/build/css/aboutPage.css', null, time() );
+    wp_enqueue_style( 'template-services', get_template_directory_uri() . '/build/css/servicesPage.css', null, time() );
+    wp_enqueue_style( 'template-work', get_template_directory_uri() . '/build/css/workPage.css', null, time() );
 
     wp_enqueue_style( 'lightbox-gallery', get_template_directory_uri() . '/build/css/lightboxGallery.css', null, time() );
     wp_enqueue_style( 'accordion-style', get_template_directory_uri() . '/build/css/accordion.css', null, time() );

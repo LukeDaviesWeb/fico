@@ -1,0 +1,64 @@
+#work-page-content{
+  .work-grid{
+    max-width: 930px;
+    margin: 75px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(285px,1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+    .tile{
+      min-height: 300px; 
+      background-size: contain;
+    }
+    // row one
+    .tile-01{
+      background-image: url('/wp-content/uploads/2019/05/09.-3.SAKURA.png');
+    }
+    .tile-02{
+      background-image: url('/wp-content/uploads/2019/05/09.-2.SAKURA.png');
+    }
+    .tile-03{
+      background-image: url('/wp-content/uploads/2019/05/09.-1.SAKURA.png');
+    }
+    //row two
+    .tile-04{
+      background-image: url('/wp-content/uploads/2019/05/09.-4.LMB_.png')
+    }
+    .tile-05{
+      background-image: url('/wp-content/uploads/2019/05/09.-5.LMB_.png')
+    }
+    .tile-06{
+      background-image: url('/wp-content/uploads/2019/05/04.-LMB.png')
+    }
+    // row three
+    .tile-07{
+      background-image: url('/wp-content/uploads/2019/05/09.-7.SHOOTERS.png')
+    }
+    .tile-08{
+      background-image: url('/wp-content/uploads/2019/05/09.-8.SHOOTERS.png')
+    }
+    .tile-09{
+      background-image: url('/wp-content/uploads/2019/05/09.-9.SHOOTERS.png')
+    }
+    // row four
+    .tile-10{
+      background-image: url('/wp-content/uploads/2019/05/09.-13.PJS_.png')
+    }
+    .tile-11{
+      background-image: url('/wp-content/uploads/2019/05/09.-11.PJS_.png')
+    }
+    .tile-12{
+      background-image: url('/wp-content/uploads/2019/05/09.-10.PJS_.jpg')
+    }
+    // row five
+    .tile-13, .tile-14, .tile-15{
+      background-image: url('/wp-content/uploads/2019/05/04.-EVOLUTION.jpg')
+    }
+  }
+
+  .slider-container{
+    max-width: 930px;
+    margin: 0px auto 75px auto;
+  }
+}
